@@ -1,32 +1,70 @@
-<div class="container">
-  <div class="main">
+<p>
+  <mat-toolbar>
     <div class="Header">
       <h1>Calculator App</h1>
     </div>
+  </mat-toolbar>
+</p>
+
+<div class="container">
+  <div class="main">
 
     <div class="input_container">
-      <input type="number" name="n1" [(ngModel)]="n1">
-      <input type="number" name="n2" [(ngModel)]="n2">
+      <input type="number" name="n1" value=0 [(ngModel)]="n1">
+      <input type="number" name="n2" value=0 [(ngModel)]="n2">
     </div>
 
     <div class="button_container">
-      <button class="btn" (click)="add()">Addition</button>
-      <button class="btn" (click)="sub()">Subtraction</button>
-      <button class="btn" (click)="mul()">Multiplication</button>
+      <button mat-button color="primary" class="btn" (click)="add()">
+        <span>
+          Addition
+        </span>
+        <mat-icon aria-label="icon-addition">add</mat-icon>
+      </button>
+
+      <button mat-button color="accent" class="btn" (click)="sub()">
+        <span>
+          Subtraction
+        </span>
+        <mat-icon aria-label="icon-subtraction">remove</mat-icon>
+      </button>
+
+      <button mat-button color="primary" class="btn" (click)="mul()">
+        <span>
+          Multiplication
+        </span>
+        <mat-icon aria-label="icon-multiplication">close</mat-icon>
+      </button>
     </div>
+
     <div class="button_container">
-      <button class="btn" (click)="divi()">Division</button>
-      <button class="btn" (click)="fac()">Factorial</button>
-      <button class="btn" (click)="prime()">Prime Checker</button>
+      <button mat-button color="accent" class="btn" (click)="divi()">
+        <span>
+          Division
+        </span>
+        <mat-icon aria-label="icon-divide">edit</mat-icon>
+      </button>
+
+      <button mat-button color="primary" class="btn" (click)="fac()">
+        <span>
+          Factorial
+        </span>
+        <mat-icon aria-label="icon-factorial">priority_high</mat-icon>
+      </button>
+
+      <button mat-button color="accent" class="btn" (click)="prime()">
+        <span>
+          Prime Checker
+        </span>
+        <mat-icon aria-label="icon-p">done</mat-icon>
+      </button>
     </div>
 
     <div class="ans">
-      <div>
+      <mat-card>
         Result:
-      </div>
-      <div>
         {{!n5 ? n3 : n4}}
-      </div>
+      </mat-card>
     </div>
   </div>
 </div>

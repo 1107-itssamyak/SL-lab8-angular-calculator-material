@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+}
+
 .container {
   width: 90%;
   margin: auto;
@@ -13,7 +17,7 @@ h1 {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 100vh;
+  height: 85vh;
 }
 
 .input_container,
@@ -24,12 +28,17 @@ h1 {
   padding: 1rem;
 }
 
+.Header {
+  margin: 1.5rem 4rem;
+}
+
 .input_container input {
   border: none;
   border-bottom: 1px solid black;
   padding: 10px;
   height: 20px;
   width: 8rem;
+  font-size: 1.5rem;
 }
 
 .input_container input:focus {
@@ -37,14 +46,9 @@ h1 {
 }
 
 .btn {
-  border: 2px solid lightblue;
-  padding: 8px 30px;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  min-width: 175px;
+  border: 1px solid #e0e0e0;
+  padding: 0.5rem 3rem;
 }
-
 .btn:focus {
   outline: 0;
 }
@@ -67,4 +71,22 @@ h1 {
 .ans div:nth-of-type(2) {
   min-width: 30px;
   margin-left: 10px;
+}
+
+mat-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+}
+
+@media (max-width: 840px) {
+  .btn {
+    width: 150px;
+    padding: 0.5rem 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .btn {
+    padding: 0.5rem 1.2rem;
+  }
 }

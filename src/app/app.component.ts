@@ -25,7 +25,7 @@ export class AppComponent {
 
   add() {
     this.n5 = 0;
-    if (this.n1 == NaN && this.n2 === NaN) {
+    if (this.n1 == undefined && this.n2 === undefined) {
       this.n3 = `0`;
       return;
     }
@@ -34,7 +34,7 @@ export class AppComponent {
 
   sub() {
     this.n5 = 0;
-    if (this.n1 == NaN && this.n2 === NaN) {
+    if (this.n1 == undefined && this.n2 === undefined) {
       this.n3 = `0`;
       return;
     }
@@ -43,7 +43,7 @@ export class AppComponent {
 
   mul() {
     this.n5 = 0;
-    if (this.n1 == NaN && this.n2 === NaN) {
+    if (this.n1 == undefined && this.n2 === undefined) {
       this.n3 = `0`;
       return;
     }
@@ -52,7 +52,7 @@ export class AppComponent {
 
   divi() {
     this.n5 = 0;
-    if (this.n1 == NaN && this.n2 === NaN) {
+    if (this.n1 == undefined && this.n2 === undefined) {
       this.n3 = `0`;
       return;
     }
@@ -63,6 +63,10 @@ export class AppComponent {
     this.n5 = 0;
     let ans = 1;
     let n = this.n1;
+    if (this.n1 == undefined) {
+      this.n3 = `0`;
+      return;
+    }
     while (n != 1) {
       ans *= n;
       n--;
@@ -73,6 +77,11 @@ export class AppComponent {
   prime(){
     let flag = true;
     this.n5 = 1;
+
+    if (this.n1 == undefined) {
+      this.n4 = `enter a number in 1 input box`;
+      return;
+    }
     
     if (this.n1 === 1) {
       this.n4 = `0`;
