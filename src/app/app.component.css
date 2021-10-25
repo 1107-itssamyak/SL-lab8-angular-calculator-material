@@ -79,14 +79,18 @@ mat-card {
 }
 
 @media (max-width: 840px) {
+  body {
+    font-size: 1rem;
+  }
+
   .btn {
     width: 150px;
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 1.2rem;
   }
 }
 
 @media (max-width: 640px) {
   .btn {
-    padding: 0.5rem 1.2rem;
+    padding: 0.5rem 0rem;
   }
 }
